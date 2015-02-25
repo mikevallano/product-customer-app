@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-#before_action :set_customer, only: [:show, :edit, :update, :destroy]
+before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -26,7 +26,19 @@ class CustomersController < ApplicationController
   end
 
   def edit
+    @customer = Customer.find(params[:id])
   end
+
+  def update
+    if @customer.update(whitelist_customer_params)
+        redirect_to action: 'index'
+      else
+        render :edit
+      end
+  end
+
+
+
 end
 
 

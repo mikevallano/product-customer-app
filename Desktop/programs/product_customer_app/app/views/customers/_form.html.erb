@@ -1,1 +1,11 @@
-_form.html.erb
+<%= form_for @customer do |f| %>
+
+  <%= f.label :name, "enter yer name" %><br>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :email, "enter yer email" %><br>
+  <%= f.text_field :email %><br><br>
+
+  <%= f.submit "create a user" %>
+
+<% end %>
