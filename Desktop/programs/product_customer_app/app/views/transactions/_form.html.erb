@@ -1,0 +1,11 @@
+<%= form_for @transaction do |f| %>
+
+  <%= f.label :customer_id, "pick yer customer" %><br>
+  <%= f.collection_select(:customer_id, Customer.all, :id, :name) %><br><br>
+
+  <%= f.label :product_id, "pick yer product" %><br>
+  <%= f.collection_select(:product_id, Product.all, :id, :description) %><br><br>
+
+  <%= f.submit "make a transaction" %>
+
+<% end %>

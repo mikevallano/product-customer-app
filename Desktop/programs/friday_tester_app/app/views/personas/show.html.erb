@@ -1,0 +1,21 @@
+<h1>This is the Persona's View Page</h1>
+<p></p>
+
+<strong>Name:</strong>
+<%= @persona.personaname %><br>
+
+<strong>Age:</strong>
+<%= @persona.age %><br>
+
+<strong>Description:</strong>
+<%= @persona.description %><br>
+
+<p>
+  </p>
+  <hr>
+
+<%= link_to 'Edit', edit_persona_path(@persona) %> |
+
+<%= link_to 'Back to Personas', root_path %> |
+
+If you really wanna, <%= link_to 'Delete', @persona, method: :delete %>

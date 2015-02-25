@@ -1,0 +1,11 @@
+<h1>Persona Pisser!</h1>
+<p>This is the homepage.</p>
+
+<% @personas.each do |persona| %>
+<strong>Name:</strong> <%= link_to persona.personaname, persona %><br>
+<strong>Age:</strong> <%= persona.age %><br>
+<strong>Description:</strong> <%= persona.description %><br>
+<p>
+</p>
+
+<% end %>

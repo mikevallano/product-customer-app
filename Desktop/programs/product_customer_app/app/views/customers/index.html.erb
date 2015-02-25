@@ -1,0 +1,10 @@
+<h1>Customers#index</h1>
+<p>Find me in app/views/customers/index.html.erb</p>
+
+<% @customers.each do |c| %>
+<ul>
+  <li>Customer Name: <%= c.name.titlecase %></li>
+  <li>Email: <%= c.email %></li>
+  <li><%= link_to "Show all orders for #{c.name.titlecase}", customer_path(c.id) %></li>
+</ul>
+<% end %>

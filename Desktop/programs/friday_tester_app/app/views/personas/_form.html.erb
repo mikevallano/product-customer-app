@@ -1,0 +1,14 @@
+<%= form_for @persona do |f| %>
+
+  <%= f.label :personaname, "enter persona name:" %><br>
+  <%= f.text_field :personaname %><br>
+
+  <%= f.label :age, "enter persona age:" %><br>
+  <%= f.text_field :age %><br>
+
+  <%= f.label :description, "enter description:" %><br>
+  <%= f.text_field :description %><br>
+
+  <%= f.submit %>
+
+  <% end %>

@@ -1,0 +1,22 @@
+<div>
+  <h1>Customer Info</h1>
+</div>
+<div>
+Name: <%= @customer_find.name.titlecase %><br>
+Email: <%= @customer_find.email %><br><br>
+<div>
+
+<%= "Orders placed by #{@customer_find.name.titlecase}:" %><br>
+
+<% @cust_trans.each do |c| %>
+<ul>
+<li><%= c.product.description %></li>
+</ul>
+
+<% end %>
+
+<%= link_to "edit this customer", edit_customer_path %>
+
+
+
+

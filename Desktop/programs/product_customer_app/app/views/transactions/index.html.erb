@@ -1,0 +1,13 @@
+<h1>Transactions</h1>
+<p>Behold mah transactions</p>
+
+
+<% @transactions.each do |t| %>
+<ul>
+  <li>Transaction id: <%= t.id %></li>
+  <li>Customer Name: <%= t.customer.name.titlecase %></li>
+  <li>Product Order: <%= t.product.description %></li>
+  <li><%= link_to "Show all orders for #{t.customer.name.titlecase}", customer_path(t.customer_id) %></li>
+</ul>
+
+<% end %>
